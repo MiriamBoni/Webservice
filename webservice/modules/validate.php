@@ -9,9 +9,9 @@ function _ValidateMethodExists($pMethod){
     $method_list = array('lcase', 'ucase', 'reverse', 'sumar', 'is_numeric', 'in_string', 'checkdate', 'reverse','capitalize', 'equals', 'is_type', 'listmethods', 'strlen');
 
     if (in_array($pMethod, $method_list, TRUE)) {
-        return 0; #si el método existe devolverá error 0 (no hay error)
+        return 0; //si el método existe devolverá error 0 (no hay error)
     }else{
-        return 5001; #sino devuelve este num
+        return 5001; //sino devuelve este num
     };
 }
 //////////////////////////////////////////////////////
@@ -47,9 +47,6 @@ function _ValidateParamsForThisMethod($pMethod, $pP1,$pP2){
             break;
         case "is_type":
             $err=isType($pP1);
-            break;
-        case "listmethods":
-            $err=ValidString($pP1); //no funciona
             break;
         case "strlen":
             $err=ValidString($pP1);

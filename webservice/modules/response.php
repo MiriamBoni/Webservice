@@ -1,5 +1,5 @@
 <?php
-
+$error_desc=getError($err);
 $xmlsrt=<<<XML
     <response>
         <datetime>$date</datetime>
@@ -19,5 +19,5 @@ $xmlsrt=<<<XML
 XML;
 header("Content-Type:text/xml");
 $xml =new SimpleXMLElement($xmlsrt);
-//$error_desc=ErrorInfo($err);
+
 ?>

@@ -1,7 +1,7 @@
 <?php
 
-function ErrorInfo ($error_desc){
-    switch ($err){
+function getError ($ParErr){
+    switch ($ParErr){
         case "6000":
             $error_desc="String inferior a 1 caracter";
             break;
